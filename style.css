@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+/*font-family: 'Lato', sans-serif;*/
+
+body{
+    background: #fff;
+    font-size: 16px;
+    line-height: 25px;
+    color: #000;
+    font-family: 'Lato', sans-serif;
+}
+
+.grid-container{
+    display: grid;
+    height: 100%;
+    grid-gap: 20px;
+    grid-template-areas: 
+        'item1 item1 item2 item3'
+        'item1 item1 item4 item5';
+}
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ccc;
+}
+.item1{
+    grid-area: item1;
+    min-height: 400px;
+}
+.item2{
+    grid-area: item2;
+}
+.item3{
+    grid-area: item3;
+}
+.item4{
+    grid-area: item4;
+}
+.item5{
+    grid-area: item5;
+}
+
+@media only screen and (max-width: 767px){
+    .grid-container{
+        grid-template-areas: 
+        'item1 item1'
+        'item2 item3'
+        'item4 item5';
+    }
+    
+}
+@media only screen and (max-width: 480px){
+    .grid-container{
+        grid-template-areas: 
+        'item1'
+        'item2'
+        'item3'
+        'item4'
+        'item5'
+    }
+    
+}
